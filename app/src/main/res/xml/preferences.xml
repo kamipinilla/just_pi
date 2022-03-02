@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.juancpinillar.justpi.ui.settings.StartingDigitPreference
+        android:key="@string/key_starting_digit_pref"
+        android:title="@string/starting_digit_pref_title"
+        android:defaultValue="1"/>
+    <android.support.v7.preference.CheckBoxPreference
+        android:key="@string/key_cue_wrong_guess_pref"
+        android:title="@string/cue_wrong_guess_pref_title"
+        android:defaultValue="false"/>
+    <android.support.v7.preference.CheckBoxPreference
+        android:key="@string/key_show_digits_pref"
+        android:title="@string/show_digits_pref_title"
+        android:defaultValue="true"/>
+
+</android.support.v7.preference.PreferenceScreen>

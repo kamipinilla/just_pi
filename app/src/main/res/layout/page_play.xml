@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/page_play_top_guideline_percentage"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/page_play_bottom_guideline_percentage" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/cueStartGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/cueEndGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <View
+        android:id="@+id/cueView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cue_circle"
+        android:alpha="0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/cueStartGuideline"
+        app:layout_constraintEnd_toStartOf="@id/cueEndGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline"
+        tools:alpha="1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline">
+        <FrameLayout
+            android:id="@+id/digit1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/digit2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/digit4">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/digit1"
+            app:layout_constraintEnd_toStartOf="@id/digit3"
+            app:layout_constraintBottom_toTopOf="@id/digit5">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/digit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/digit6">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/digit5"
+            app:layout_constraintTop_toBottomOf="@id/digit1"
+            app:layout_constraintBottom_toTopOf="@id/digit7">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="5"
+            app:layout_constraintStart_toEndOf="@id/digit4"
+            app:layout_constraintEnd_toStartOf="@id/digit6"
+            app:layout_constraintTop_toBottomOf="@id/digit2"
+            app:layout_constraintBottom_toTopOf="@id/digit8">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="6"
+            app:layout_constraintStart_toEndOf="@id/digit5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/digit3"
+            app:layout_constraintBottom_toTopOf="@id/digit9">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/digit8"
+            app:layout_constraintTop_toBottomOf="@id/digit4"
+            app:layout_constraintBottom_toTopOf="@id/digit0">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="8"
+            app:layout_constraintStart_toEndOf="@id/digit7"
+            app:layout_constraintEnd_toStartOf="@id/digit9"
+            app:layout_constraintTop_toBottomOf="@id/digit5"
+            app:layout_constraintBottom_toTopOf="@id/digit0">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="9"
+            app:layout_constraintStart_toEndOf="@id/digit8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/digit6"
+            app:layout_constraintBottom_toTopOf="@id/digit0">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/digit0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:tag="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/digit8">
+            <include layout="@layout/play_digit_content"/>
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

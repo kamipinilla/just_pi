@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Play page-->
+    <item name="page_play_top_guideline_percentage" format="float" type="dimen">0.2</item>
+    <item name="page_play_bottom_guideline_percentage" format="float" type="dimen">0.8</item>
+
+    <!--Play digit content-->
+    <item name="play_digit_start_outer_percentage" format="float" type="dimen">0.2</item>
+    <item name="play_digit_end_outer_percentage" format="float" type="dimen">0.8</item>
+    <item name="play_digit_start_inner_percentage" format="float" type="dimen">0.4</item>
+    <item name="play_digit_end_inner_percentage" format="float" type="dimen">0.6</item>
+
+    <!--Digits page-->
+    <item name="page_digits_top_guideline_percentage" format="float" type="dimen">0.17</item>
+    <item name="page_digits_bottom_guideline_percentage" format="float" type="dimen">0.95</item>
+</resources>

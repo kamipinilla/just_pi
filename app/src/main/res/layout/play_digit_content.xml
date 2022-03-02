@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline
+        android:id="@+id/startOuterGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/play_digit_start_outer_percentage"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/endOuterGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/play_digit_end_outer_percentage"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/startInnerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/play_digit_start_inner_percentage"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/endInnerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/play_digit_end_inner_percentage"/>
+    <View
+        android:id="@+id/digitCircleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/digit_circle"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/startOuterGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endOuterGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/digitContentImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/startInnerGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endInnerGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@drawable/digit0"/>
+
+</android.support.constraint.ConstraintLayout>
